@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://awesome/common" xmlns:tns="http://awesome/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="gui" type="tns:gui"/>
+
+  <xs:complexType name="gui">
+    <xs:sequence>
+      <xs:element name="groups" type="tns:detailGroup" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="detailGroup">
+    <xs:sequence>
+      <xs:element name="fields" type="tns:field" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="field">
+    <xs:sequence>
+      <xs:element name="dataSource" type="tns:fieldSource" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="fieldSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ConstantValue"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
