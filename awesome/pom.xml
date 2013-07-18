@@ -81,7 +81,7 @@
 	                 <includes>
 	                     <include>com/simi/awesome/schema/**/*.java</include>
 	                 </includes>
-	                 <outputDirectory>${project.build.directory}/schemas</outputDirectory>
+	                 <outputDirectory>${project.build.directory}/</outputDirectory>
 	             </configuration>
 	           </execution>
 	         </executions>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="detailGroup" type="detailGroup"/>
+
+  <xs:element name="field" type="field"/>
+
+  <xs:element name="gui" type="gui"/>
+
+  <xs:complexType name="gui">
+    <xs:sequence>
+      <xs:element name="groups" type="detailGroup" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="detailGroup">
+    <xs:sequence>
+      <xs:element name="fields" type="field" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="field">
+    <xs:sequence>
+      <xs:element name="dataSource" type="fieldSource" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="fieldSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ConstantValue"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
