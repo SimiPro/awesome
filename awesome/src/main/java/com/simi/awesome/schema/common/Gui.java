@@ -3,6 +3,7 @@ package com.simi.awesome.schema.common;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(namespace = "##default")
@@ -11,15 +12,16 @@ public class Gui {
 	List<DetailGroup> detailGroup;
 
 	public Gui() {
-		setGroups(new ArrayList<DetailGroup>());
+		setGroup(new ArrayList<DetailGroup>());
 	}
 
-	public List<DetailGroup> getGroups() {
+	@XmlElement
+	public List<DetailGroup> getGroup() {
 		return detailGroup;
 	}
 
-	public void setGroups(List<DetailGroup> groups) {
-		this.detailGroup = groups;
+	public void setGroup(List<DetailGroup> group) {
+		this.detailGroup = group;
 	}
 
 }

@@ -5,16 +5,16 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType
-public class DetailGroup implements Group {
+public class DetailGroup {
 
 	List<Field> field;
 
-	public List<Field> getFields() {
+	public List<Field> getField() {
 		return field;
 	}
 
-	public void setFields(List<Field> fields) {
-		this.field = fields;
+	public void setField(List<Field> field) {
+		this.field = field;
 	}
 
 }
