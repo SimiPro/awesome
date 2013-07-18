@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:element name="detailGroup" type="detailGroup"/>
-
-  <xs:element name="field" type="field"/>
-
   <xs:element name="gui" type="gui"/>
 
   <xs:complexType name="gui">

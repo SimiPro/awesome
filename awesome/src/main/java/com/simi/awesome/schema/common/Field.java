@@ -1,8 +1,6 @@
 package com.simi.awesome.schema.common;
 
-import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
 public class Field {
 
 	private enum FieldSource {
