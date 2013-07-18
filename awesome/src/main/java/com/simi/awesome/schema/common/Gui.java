@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.simi.awesome.schema.groups.detail.DetailGroup;
 
-@XmlRootElement
+@XmlRootElement(namespace = "http://awesome")
 public class Gui {
 
 	List<DetailGroup> groups;
