@@ -5,13 +5,13 @@
 
   <xs:complexType name="gui">
     <xs:sequence>
-      <xs:element name="groups" type="tns:detailGroup" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="group" type="tns:detailGroup" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="detailGroup">
     <xs:sequence>
-      <xs:element name="fields" type="tns:field" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="field" type="tns:field" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
