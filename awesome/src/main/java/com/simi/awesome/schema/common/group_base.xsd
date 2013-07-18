@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/common/group_base.xsd">
+        targetNamespace="https://awesome/commons/group>
 	<complexType name="group">
 		
 	</complexType>
