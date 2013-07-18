@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-		xmlns:groups="https://awesome/commons/group"
+		xmlns:detail="https://awesome/commons/group/detailgroup"
 		targetNamespace="https://awesome/commons/gui" >
-	<import namespace="https://awesome/commons/group" schemaLocation="https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/common/group_base.xsd" />
+	<import namespace="https://awesome/commons/group/detailgroup" schemaLocation="https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/groups/detail/detail.xsd" />
 	<element name="gui">
 		<complexType>
 		  <sequence>
-			  <element name="group" type="groups:group"/>
+		  	<choice>
+		      <element name="detailGroup" type="detail:detail-group" />
+		  	</choice>
 		  </sequence>
 		</complexType>
 	</element>
