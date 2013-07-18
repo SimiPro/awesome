@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		xmlns:groups="https://awesome/commons/group"
+		targetNamespace="https://awesome/commons/gui" >
+	<import namespace="https://awesome/commons/group" schemaLocation="https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/common/group_base.xsd" />
+	<element name="gui">
+		<complexType>
+		  <sequence>
+			  <element name="group" type="groups:group"/>
+		  </sequence>
+		</complexType>
+	</element>
+</schema>

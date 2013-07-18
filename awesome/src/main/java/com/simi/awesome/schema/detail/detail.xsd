@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+		xmlns:groups="https://awesome/commons/group"
+		xmlns:fields="https://awesome/commons/field">
+ 	<import namespace="https://awesome/commons/group" schemaLocation="https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/common/group_base.xsd" />
+ 	<import namespace="https://awesome/commons/field"  schemaLocation="https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/common/field_base.xsd"/>
+	<complexType name="detail-group">
+		<complexContent>
+			<extension base="groups:group">
+				<sequence>
+					<element name="field" type="fields:field" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

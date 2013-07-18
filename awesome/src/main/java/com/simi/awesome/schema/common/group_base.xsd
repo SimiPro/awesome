@@ -2,6 +2,5 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="https://awesome/commons/group">
 	<complexType name="group">
-		
 	</complexType>
 </schema>
