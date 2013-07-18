@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xmlns:xsi="https://awesome/commons/gui" 
+	 xmlns:grp="https://awesome/commons/group/detailgroup"
+	 xsi:schemaLocation="https://awesome/commons/gui https://raw.github.com/SimiPro/awesome/master/awesome/src/main/java/com/simi/awesome/schema/common/common.xsd">
+	<xsi:gui>
+	</xsi:gui>
+</doc>

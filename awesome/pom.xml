@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>awesome</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/SimiPro/awesome</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,4 +22,70 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+    <pluginManagement>
+        <plugins>
+            <!--This plugin's configuration is used to store Eclipse 
+                m2e settings only. It has no influence on the Maven build itself. -->
+            <plugin>
+                <groupId>org.eclipse.m2e</groupId>
+                <artifactId>lifecycle-mapping</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <lifecycleMappingMetadata>
+                        <pluginExecutions>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.codehaus.mojo</groupId>
+                                    <artifactId>jaxb2-maven-plugin</artifactId>
+                                    <versionRange>[1.0,)</versionRange>
+                                    <goals>
+                                        <goal>schemagen</goal>
+                                        <goal>testSchemagen</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute />
+                                </action>
+                            </pluginExecution>
+                        </pluginExecutions>
+                    </lifecycleMappingMetadata>
+                </configuration>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+  
+  	<plugins>
+	 <plugin>
+      <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+    </plugin>
+
+	  <plugin>
+	     <groupId>org.codehaus.mojo</groupId>
+	     <artifactId>jaxb2-maven-plugin</artifactId>
+	     <version>1.5</version>
+	     <executions>
+	         <execution>
+	             <goals>
+	                 <goal>schemagen</goal>
+	                 <goal>testSchemagen</goal>
+	             </goals>
+	             <phase>generate-resources</phase>
+	             <configuration>
+	             		
+	                 <includes>
+	                     <include>com/simi/awesome/schema/**/*.java</include>
+	                 </includes>
+	                 <outputDirectory>${project.build.directory}/schemas</outputDirectory>
+	             </configuration>
+	           </execution>
+	         </executions>
+	    </plugin>
+  	</plugins>
+  </build>
 </project>
