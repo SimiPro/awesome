@@ -17,14 +17,20 @@
 
   <xs:complexType name="field">
     <xs:sequence>
-      <xs:element name="dataSource" type="tns:fieldSource" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="Constant" type="xs:string"/>
+        <xs:element name="DatasourceField" type="tns:datasourceField"/>
+        <xs:element name="ScriptValue" type="tns:scriptValue"/>
+      </xs:choice>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:simpleType name="fieldSource">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="ConstantValue"/>
-    </xs:restriction>
-  </xs:simpleType>
+  <xs:complexType name="datasourceField">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="scriptValue">
+    <xs:sequence/>
+  </xs:complexType>
 </xs:schema>
 
