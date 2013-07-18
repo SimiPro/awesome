@@ -5,23 +5,21 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.simi.awesome.schema.groups.detail.DetailGroup;
-
-@XmlRootElement(namespace = "http://awesome")
+@XmlRootElement(namespace = "##default")
 public class Gui {
 
-	List<DetailGroup> groups;
+	List<DetailGroup> detailGroup;
 
 	public Gui() {
 		setGroups(new ArrayList<DetailGroup>());
 	}
 
 	public List<DetailGroup> getGroups() {
-		return groups;
+		return detailGroup;
 	}
 
 	public void setGroups(List<DetailGroup> groups) {
-		this.groups = groups;
+		this.detailGroup = groups;
 	}
 
 }
