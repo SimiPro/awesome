@@ -5,7 +5,13 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<group>
 		<field>
-			<datasourceValue xsi:type="constantValue"/>
+			<Constant>Test</Constant>
+		</field>
+		<field>
+			<DatasourceField/>
+		</field>
+		<field>
+			<ScriptValue/>
 		</field>
 	</group>
 </gui>

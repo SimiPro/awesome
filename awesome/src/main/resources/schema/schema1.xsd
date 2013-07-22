@@ -5,14 +5,6 @@
 
   <xs:element name="gui" type="tns:gui"/>
 
-  <xs:complexType name="datasourceField">
-    <xs:sequence/>
-  </xs:complexType>
-
-  <xs:complexType name="scriptValue">
-    <xs:sequence/>
-  </xs:complexType>
-
   <xs:complexType name="gui">
     <xs:sequence>
       <xs:element name="group" type="tns:detailGroup" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
@@ -29,19 +21,27 @@
   <xs:complexType name="field">
     <xs:sequence>
       <xs:choice minOccurs="0">
-        <xs:element name="Constant" type="xs:string"/>
+        <xs:element name="Constant" type="tns:constant"/>
         <xs:element name="DatasourceField" type="tns:datasourceField"/>
         <xs:element name="ScriptValue" type="tns:scriptValue"/>
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="valueToInterfaceAdapter">
-    <xs:complexContent>
-      <xs:extension base="xmlAdapter">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="constant">
+    <xs:sequence>
+      <xs:element name="constant" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="datasourceField">
+    <xs:sequence>
+      <xs:element name="datasourceField" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scriptValue">
+    <xs:sequence/>
   </xs:complexType>
 
   <xs:complexType name="datasourceValueAdapter">
@@ -52,11 +52,19 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="datasourceValue">
+  <xs:complexType name="constantValue">
     <xs:sequence/>
   </xs:complexType>
 
-  <xs:complexType name="constantValue">
+  <xs:complexType name="valueToInterfaceAdapter">
+    <xs:complexContent>
+      <xs:extension base="xmlAdapter">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="datasourceValue">
     <xs:sequence/>
   </xs:complexType>
 </xs:schema>

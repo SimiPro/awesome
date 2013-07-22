@@ -42,14 +42,13 @@
                                     <versionRange>[1.0,)</versionRange>
                                     <goals>
                                         <goal>schemagen</goal>
-                                        <goal>testSchemagen</goal>
                                     </goals>
                                 </pluginExecutionFilter>
                                 <action>
                                     <execute />
                                 </action>
                             </pluginExecution>
-                        </pluginExecutions>
+                         </pluginExecutions>
                     </lifecycleMappingMetadata>
                 </configuration>
             </plugin>
@@ -68,20 +67,19 @@
 	  <plugin>
 	     <groupId>org.codehaus.mojo</groupId>
 	     <artifactId>jaxb2-maven-plugin</artifactId>
-	     <version>1.5</version>
+	     <version>1.3.1</version>
 	     <executions>
 	         <execution>
 	             <goals>
 	                 <goal>schemagen</goal>
-	                 <goal>testSchemagen</goal>
 	             </goals>
 	             <phase>generate-resources</phase>
 	             <configuration>
-	             		
+	             	<verbose>true</verbose>
 	                 <includes>
-	                     <include>com/simi/awesome/**/*.java</include>
-	                 </includes>
-	                 <outputDirectory>${project.build.directory}/</outputDirectory>
+	                     <include>com/simi/awesome/schema/common/*.java</include>
+	                 </includes> 
+	                 <outputDirectory>${project.build.directory}</outputDirectory>
 	             </configuration>
 	           </execution>
 	         </executions>
